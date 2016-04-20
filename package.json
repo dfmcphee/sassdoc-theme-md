@@ -1,0 +1,45 @@
+{
+  "name": "sassdoc-theme-markdown",
+  "version": "1.0.0",
+  "description": "Sassdoc theme that converts to markdown",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellioseven/sassdoc-theme-markdown.git"
+  },
+  "main": "dist",
+  "files": [
+    "dist",
+    "templates",
+    "default.json",
+    "index.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "keywords": [
+    "Sassdoc",
+    "Sassdoc Theme",
+    "Sassdoc Markdown",
+    "sassdoc-theme"
+  ],
+  "author": "Elliot Mitchum <elliot.mitchum@ellioseven.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellioseven/sassdoc-theme-markdown/issues"
+  },
+  "homepage": "https://github.com/ellioseven/sassdoc-theme-markdown#readme",
+  "dependencies": {
+    "es6-denodeify": "^0.1.5",
+    "es6-promise": "^3.1.2",
+    "extend": "^3.0.0",
+    "fs-extra": "^0.28.0",
+    "markdown-table": "^0.4.0",
+    "sassdoc-extras": "^2.4.1",
+    "swig": "^1.4.2"
+  }
+}
