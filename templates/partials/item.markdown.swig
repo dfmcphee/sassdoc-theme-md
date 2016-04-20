@@ -9,3 +9,4 @@
 {% endfor %}
 {% include 'annotations/changelog.markdown.swig' %}
 {% endif %}
+---

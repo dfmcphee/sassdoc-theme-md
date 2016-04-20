@@ -10,7 +10,6 @@
 {% filter parse_code %}
 {{ example.code|escape|safe }}
 {% endfilter %}
-{% endfor %}
 ```
-
+{% endfor %}
 {% endif %}

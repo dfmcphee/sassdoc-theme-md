@@ -1,10 +1,14 @@
-{% if item.usedBy.length > 0 %}
+{% set title_displayed = false %}
+{% for usedBy in item.usedBy %}
+{% if (display.access.indexOf(usedBy.access) != -1) %}
+{% if not (not display.alias and usedBy.alias) %}
+{% if not title_displayed %}
+{% set title_displayed = true %}
+
 {{ "Used By"|subsubsection_heading }}
 
-{% for usedBy in item.usedBy %}
-{% if (display.access.indexOf(usedBy.access) != -1) and display.alias %}
+{% endif %}
 * [{{ usedBy.context.type }}] `{{ usedBy.context.name }}`
 {% endif %}
-{% endfor %}
-
 {% endif %}
+{% endfor %}
