@@ -7,7 +7,7 @@
 {% elseif item.context.type == "variable" %}
 ${{ item.context.name }}: {{ item.context.value }}
 {% else %}
-@{{ item.context.type }} {{ item.context.name }}({{ item|output_arg }}) { {{ item.context.code }}}
+@{{ item.context.type }} {{ item.context.name }}({{ item|output_arg }}) { {{ item.context.code | safe }}}
 {% endif %}
 {% endfilter %}
 ```

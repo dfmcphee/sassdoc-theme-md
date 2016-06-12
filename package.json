@@ -1,6 +1,6 @@
 {
   "name": "sassdoc-theme-markdown",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Sassdoc theme that converts to markdown",
   "directories": {
     "test": "test"
