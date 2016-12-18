@@ -1,7 +1,7 @@
 {
-  "name": "sassdoc-theme-markdown",
-  "version": "2.0.2",
-  "description": "Sassdoc theme that converts to markdown",
+  "name": "sassdoc-theme-md",
+  "version": "1.0.0",
+  "description": "A markdown theme for SassDoc.",
   "directories": {
     "test": "test"
   },
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ellioseven/sassdoc-theme-markdown.git"
+    "url": "git+https://github.com/dfmcphee/sassdoc-theme-md.git"
   },
   "main": "dist",
   "files": [
@@ -27,12 +27,12 @@
     "Sassdoc Markdown",
     "sassdoc-theme"
   ],
-  "author": "Elliot Mitchum <elliot.mitchum@ellioseven.com>",
+  "author": "Dominic McPhee <dominic.mcphee@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ellioseven/sassdoc-theme-markdown/issues"
+    "url": "https://github.com/dfmcphee/sassdoc-theme-md/issues"
   },
-  "homepage": "https://github.com/ellioseven/sassdoc-theme-markdown#readme",
+  "homepage": "https://github.com/dfmcphee/sassdoc-theme-md#readme",
   "dependencies": {
     "es6-denodeify": "^0.1.5",
     "es6-promise": "^3.1.2",

@@ -48,14 +48,29 @@ var buildDocs = function(template, ctx, dest) {
     ctx.data.currentGroupName = ctx.groups[group];
     // Set current group.
     ctx.data.currentGroup = ctx.data.byGroupAndType[group];
+
+    const filePath = path.resolve(dest, group + '.markdown');
+    ensureDirectoryExistence(filePath);
+
     // Write file to destination.
     fs.writeFile(
-      path.resolve(dest, group + '.markdown'),
-      swig.renderFile(template, ctx)
+      filePath,
+      swig.renderFile(template, ctx),
+      { flag: 'w' }
     );
   }
   return true;
 }
+
+function ensureDirectoryExistence(filePath) {
+  var dirname = path.dirname(filePath);
+  if (fs.existsSync(dirname)) {
+    return true;
+  }
+  ensureDirectoryExistence(dirname);
+  fs.mkdirSync(dirname);
+}
+
 
 /**
  * Copy pages to destination.
