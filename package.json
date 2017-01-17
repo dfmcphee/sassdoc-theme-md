@@ -1,6 +1,6 @@
 {
   "name": "sassdoc-theme-md",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A markdown theme for SassDoc.",
   "directories": {
     "test": "test"

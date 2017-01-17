@@ -34,7 +34,7 @@ var applyDefaults = function(ctx) {
 };
 
 /**
- * Compile and render docs.
+ * Compile and render index.
  *
  * @param template
  * @param ctx
@@ -49,7 +49,7 @@ var buildDocs = function(template, ctx, dest) {
     // Set current group.
     ctx.data.currentGroup = ctx.data.byGroupAndType[group];
 
-    const filePath = path.resolve(dest, group + '.markdown');
+    const filePath = path.resolve(dest, group + '.html.md');
     ensureDirectoryExistence(filePath);
 
     // Write file to destination.
@@ -100,9 +100,8 @@ var buildPages = function(ctx, dest) {
  */
 
 module.exports = function (dest, ctx) {
-
   // Resolve entry template.
-  var template = path.resolve(__dirname, "../templates/index.markdown.swig");
+  var groupTemplate = path.resolve(__dirname, "../templates/group.markdown.swig");
 
   // Extend defaults.
   ctx = applyDefaults(ctx);
@@ -114,6 +113,6 @@ module.exports = function (dest, ctx) {
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
   // Construct.
-  return Promise.all([buildDocs(template, ctx, dest), buildPages(ctx, dest)]);
+  return Promise.all([buildDocs(groupTemplate, ctx, dest), buildPages(ctx, dest)]);
 
 };
