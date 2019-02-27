@@ -56,7 +56,12 @@ var buildDocs = function(template, ctx, dest) {
     fs.writeFile(
       filePath,
       swig.renderFile(template, ctx),
-      { flag: 'w' }
+      { flag: 'w' },
+      function(err) {
+        if (err) {
+          console.log("Error", err);
+        }
+      }
     );
   }
   return true;
