@@ -53,7 +53,7 @@ var buildDocs = function(template, ctx, dest) {
     ensureDirectoryExistence(filePath);
 
     // Write file to destination.
-    fs.writeFile(
+    fs.writeFileSync(
       filePath,
       swig.renderFile(template, ctx),
       { flag: 'w' }
